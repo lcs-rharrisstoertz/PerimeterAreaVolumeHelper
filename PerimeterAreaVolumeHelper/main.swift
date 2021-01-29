@@ -24,7 +24,9 @@ func surfaceAreaOfSquareBasedPyramid (baseLength: Double, sideLength: Double) ->
 func surfaceAreaOfRectangularPrism (width: Double, height: Double, length: Double) -> Double {
     return 2.0*width*height + 2.0*length*width + 2.0*length*height
 }
-
+func surfaceAreaOfTriangularPrism (triangleSideA: Double, triangleSideB: Double, triangleSideC: Double, height: Double, triangleLength: Double) -> Double{
+    return triangleSideB*triangleLength + triangleSideA*height + triangleSideB*height + triangleSideC*height
+}
 /// Finds the area of a rectangle
 /// - Parameter length: length of rectangle
 /// - Parameter width: width of rectangle
