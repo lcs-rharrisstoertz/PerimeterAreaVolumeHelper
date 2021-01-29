@@ -43,10 +43,24 @@ func surfaceAreaOfSquareBasedPyramid (baseLength: Double, sideLength: Double) ->
     return pow(baseLength, 2.0) + 2.0 * baseLength * sideLength
 }
 
+/// finds the surface area of a rectangular prism
+/// - Parameters:
+///   - width: width of the prism
+///   - height: height of the prism
+///   - length: length of the prism
+/// - Returns: surface area of the rectangular prism
 func surfaceAreaOfRectangularPrism (width: Double, height: Double, length: Double) -> Double {
     return 2.0*width*height + 2.0*length*width + 2.0*length*height
 }
 
+/// finds the surface area of a triangular prism
+/// - Parameters:
+///   - triangleSideA: side length of one side of the triangle base
+///   - triangleSideB: side length of another side of the triangle base
+///   - triangleSideC: side length of yet another side of the triangle base
+///   - height: height of the prism
+///   - triangleLength: the length of a line running perpendicular to one of the sides of the triangle base to the opposite vertex of the triangle
+/// - Returns: surface area of the triangular prism
 func surfaceAreaOfTriangularPrism (triangleSideA: Double, triangleSideB: Double, triangleSideC: Double, height: Double, triangleLength: Double) -> Double{
     return triangleSideB*triangleLength + triangleSideA*height + triangleSideB*height + triangleSideC*height
 }
