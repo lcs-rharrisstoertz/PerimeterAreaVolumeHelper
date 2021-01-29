@@ -15,6 +15,9 @@ func surfaceAreaOfCylinder(radius: Double, height: Double) -> Double {
 func surfaceAreaOfSphere (radius: Double) -> Double {
     return 4.0 * Double.pi * pow(radius, 2.0)
 }
+func surfaceAreaOfCone (radius: Double, sideLength: Double)-> Double {
+    return Double.pi * pow(radius, 2.0) + 2.0 * Double.pi * radius * sideLength
+}
 
 
 /// Finds the area of a rectangle
