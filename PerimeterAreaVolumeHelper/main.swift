@@ -77,8 +77,13 @@ while true {
     print("4: Square-based pyramid")
     print("5: Rectangular prism")
     print("6: Triangular Prism")
-    print("Enter your choice (B/O/D/H): ", terminator: "")
+    print("Enter your choice (1/2/3/4/5/6): ", terminator: "")
     var shape = readLine()!
+    if shape == 1 or shape == 2 or shape == 3 or shape == 4 or shape == 5 or shape == 6 {
+        break
+    } else {
+        print("Oh no! It looks like")
+    }
 }
 
 //MARK: Process
