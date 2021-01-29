@@ -10,8 +10,12 @@ import Foundation
 // MARK: Functions
 
 func surfaceAreaOfCylinder(radius: Double, height: Double) -> Double {
-    return 2.0 * Double.pi * pow(radius, 2.0)
+    return 2.0 * Double.pi * pow(radius, 2.0) + 2 * Double.pi * radius * height
 }
+func surfaceAreaOfSphere (radius: Double) -> Double {
+    return 4.0 * Double.pi * pow(radius, 2.0)
+}
+
 
 /// Finds the area of a rectangle
 /// - Parameter length: length of rectangle
