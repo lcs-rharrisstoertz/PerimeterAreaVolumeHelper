@@ -67,6 +67,19 @@ func surfaceAreaOfTriangularPrism (triangleSideA: Double, triangleSideB: Double,
 
 // MARK: Input
 
+print("Surface Area Calculator")
+print("=======================")
+while true {
+    print("What shape do you want to calculate the surface area of?")
+    print("1: Cylinder")
+    print("2: Sphere")
+    print("3: Cone")
+    print("4: Square-based pyramid")
+    print("5: Rectangular prism")
+    print("6: Triangular Prism")
+    print("Enter your choice (B/O/D/H): ", terminator: "")
+    var shape = readLine()!
+}
 
 //MARK: Process
 
