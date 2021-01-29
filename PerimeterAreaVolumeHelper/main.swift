@@ -18,6 +18,9 @@ func surfaceAreaOfSphere (radius: Double) -> Double {
 func surfaceAreaOfCone (radius: Double, sideLength: Double)-> Double {
     return Double.pi * pow(radius, 2.0) + 2.0 * Double.pi * radius * sideLength
 }
+func surfaceOfSquareBasedPyramid (baseLength: Double, sideLength: Double) -> Double {
+    return pow(baseLength, 2.0) + 2.0 * baseLength * sideLength
+}
 
 
 /// Finds the area of a rectangle
