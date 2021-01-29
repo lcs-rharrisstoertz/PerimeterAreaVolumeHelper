@@ -11,7 +11,7 @@ import Foundation
 
 /// finds the surface area of a cylinder
 /// - Parameters:
-///   - radius: straight distance from the center of one of the cylinder's circular bases to the edge of the base
+///   - radius: the straight line distance from the center of one of the cylinder's circular bases to the edge of the base
 ///   - height: the height of the cylinder
 /// - Returns: surface area of the cylinder
 func surfaceAreaOfCylinder(radius: Double, height: Double) -> Double {
@@ -19,16 +19,26 @@ func surfaceAreaOfCylinder(radius: Double, height: Double) -> Double {
 }
 
 /// finds the surface area of a sphere
-/// - Parameter radius: straight distance from the center of the sphere to the surface
+/// - Parameter radius: the straight line distance from the center of the sphere to the surface
 /// - Returns: surface area of the sphere
 func surfaceAreaOfSphere (radius: Double) -> Double {
     return 4.0 * Double.pi * pow(radius, 2.0)
 }
 
+/// finds the surface area of a cone
+/// - Parameters:
+///   - radius: the straight line distance from the center of the circular base to the edge of the base
+///   - sideLength: the straight line distance from the edge of the base to the tip of the cone
+/// - Returns: surface area of the cone
 func surfaceAreaOfCone (radius: Double, sideLength: Double)-> Double {
     return Double.pi * pow(radius, 2.0) + 2.0 * Double.pi * radius * sideLength
 }
 
+/// finds the surface area of a square-based pyramid
+/// - Parameters:
+///   - baseLength: the side-length of the pyramid base
+///   - sideLength: the straight line distance from the center of the one the edges of the base to the top of the pyramid
+/// - Returns: surface area of the square-based pyramid
 func surfaceAreaOfSquareBasedPyramid (baseLength: Double, sideLength: Double) -> Double {
     return pow(baseLength, 2.0) + 2.0 * baseLength * sideLength
 }
