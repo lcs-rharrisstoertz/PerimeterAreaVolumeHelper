@@ -4,9 +4,7 @@
 //
 //  Created by Harris-Stoertz, Rowan on 2021-01-29.
 //
-
 import Foundation
-
 // MARK: Functions
 
 /// finds the surface area of a cylinder
@@ -17,7 +15,6 @@ import Foundation
 func surfaceAreaOfCylinder(radius: Double, height: Double) -> Double {
     return 2.0 * Double.pi * pow(radius, 2.0) + 2 * Double.pi * radius * height
 }
-
 /// finds the surface area of a sphere
 /// - Parameter radius: the straight line distance from the center of the sphere to the surface
 /// - Returns: surface area of the sphere
@@ -64,15 +61,14 @@ func surfaceAreaOfRectangularPrism (width: Double, height: Double, length: Doubl
 func surfaceAreaOfTriangularPrism (triangleSideA: Double, triangleSideB: Double, triangleSideC: Double, height: Double, triangleLength: Double) -> Double{
     return triangleSideB*triangleLength + triangleSideA*height + triangleSideB*height + triangleSideC*height
 }
-
 // MARK: Input
-
+//setting up variables
 var shape = ""
 var surfaceArea = 0.0
 print("Surface Area Calculator")
-print("=======================")
-while true {
-    print("What shape do you want to calculate the surface area of?")
+print("=======================")//adds title
+while true {//starts "infinite" loop
+    print("What shape do you want to calculate the surface area of?")//print menu of options
     print("1: Cylinder")
     print("2: Sphere")
     print("3: Cone")
@@ -80,24 +76,25 @@ while true {
     print("5: Rectangular prism")
     print("6: Triangular Prism")
     print("Enter your choice (1/2/3/4/5/6): ", terminator: "")
-    shape = readLine()!
-    if shape == "1" || shape == "2" || shape == "3" || shape == "4" || shape == "5" || shape == "6" {
-        break
+    shape = readLine()!//get user choice
+    if shape == "1" || shape == "2" || shape == "3" || shape == "4" || shape == "5" || shape == "6" {//checks whether the user entered a valid choice
+        break//if the user entered a valid choice, we break out of the infinite loop and move on
     } else {
         print("Oh no! \(shape) isn't a valid option. Please choose a different option.")
-    }
+    }//if the user didn't enter a valid choice, the infinite loop restarts. They are again shown the menu of options and asked to choose a valid choice. This will repeat indefinitely until they choose a valid shape.
 }
 
-//MARK: Process
+//MARK: Process and Output
 
-switch shape {
+switch shape {//takes the input from earlier and calculates the SA of the appropriate shape
+//all the cases are basically the same, just different parameters and math
 case "1":
-    print("Enter the radius of the cylinder: ", terminator: "")
-    let radius = Double(readLine()!)
+    print("Enter the radius of the cylinder: ", terminator: "")//prints a thing telling the user to enter a value for the radius of the cylinder
+    let radius = Double(readLine()!)//user enters a value
     print("Enter the height of the cylinder: ", terminator: "")
     let height = Double(readLine()!)
-    surfaceArea = surfaceAreaOfCylinder(radius: radius!, height: height!)
-    print("The cylinder has a surface area of \(surfaceArea) units squared")
+    surfaceArea = surfaceAreaOfCylinder(radius: radius!, height: height!)//the surface area is calculates
+    print("The cylinder has a surface area of \(surfaceArea) units squared")//the program tells the user what the surface area is
 case "2":
     print("Enter the radius of the sphere: ", terminator: "")
     let radius = Double(readLine()!)
@@ -142,11 +139,3 @@ case "6":
 default:
     break
 }
-
-// MARK: Output
-
-///   - triangleSideA: side length of one side of the triangle base
-///   - triangleSideB: side length of another side of the triangle base
-///   - triangleSideC: side length of yet another side of the triangle base
-///   - height: height of the prism
-///   - triangleLength: the length of a line running perpendicular to one of the sides of the triangle base to the opposite vertex of the triangle
