@@ -93,19 +93,60 @@ while true {
 switch shape {
 case "1":
     print("Enter the radius of the cylinder: ", terminator: "")
-    var radius = Double(readLine()!)
+    let radius = Double(readLine()!)
     print("Enter the height of the cylinder: ", terminator: "")
-    var height = Double(readLine()!)
+    let height = Double(readLine()!)
     surfaceArea = surfaceAreaOfCylinder(radius: radius!, height: height!)
     print("The cylinder has a surface area of \(surfaceArea) units squared")
 case "2":
     print("Enter the radius of the sphere: ", terminator: "")
-    var radius = Double(readLine()!)
+    let radius = Double(readLine()!)
     surfaceArea = surfaceAreaOfSphere(radius: radius!)
     print("The sphere has a surface area of \(surfaceArea) units squared")
+case "3":
+    print("Enter the radius of the cone: ", terminator: "")
+    let radius = Double(readLine()!)
+    print("Enter the side-length of the cone: ", terminator: "")
+    let sideLength = Double(readLine()!)
+    surfaceArea = surfaceAreaOfCone(radius: radius!, sideLength: sideLength!)
+    print("The cone has a surface area of \(surfaceArea) units squared")
+case "4":
+    print("Enter the base length of the pyramid: ", terminator: "")
+    let baseLength = Double(readLine()!)
+    print("Enter the side length of the pyramid: ", terminator: "")
+    let sideLength = Double(readLine()!)
+    surfaceArea = surfaceAreaOfSquareBasedPyramid(baseLength: baseLength!, sideLength: sideLength!)
+    print("The square-based pyramid has a surface area of \(surfaceArea) units squared")
+case "5":
+    print("Enter the width of the rectangular prism: ", terminator: "")
+    let width = Double(readLine()!)
+    print("Enter the height of the rectangular prism: ", terminator: "")
+    let height = Double(readLine()!)
+    print("Enter the length of the rectangular prism: ", terminator: "")
+    let length = Double(readLine()!)
+    surfaceArea = surfaceAreaOfRectangularPrism(width: width!, height: height!, length: length!)
+    print("The rectangular prism has a surface area of \(surfaceArea) units squared")
+case "6":
+    print("Enter the side length of one side of the prism base: ", terminator: "")
+    let triangleSideA = Double(readLine()!)
+    print("Enter the side length of another side of the prism base: ", terminator: "")
+    let triangleSideB = Double(readLine()!)
+    print("Enter the side length of another side of the prism base: ", terminator: "")
+    let triangleSideC = Double(readLine()!)
+    print("Enter the height of the prism: ", terminator: "")
+    let height = Double(readLine()!)
+    print("Enter the length of the line running perpendicular to one side of the triangle base to the opposite vertex: ", terminator: "")
+    let triangleLength = Double(readLine()!)
+    surfaceArea = surfaceAreaOfTriangularPrism(triangleSideA: triangleSideA!, triangleSideB: triangleSideB!, triangleSideC: triangleSideC!, height: height!, triangleLength: triangleLength!)
+    print("The triangular prism has a surface area of \(surfaceArea) units squared")
 default:
     break
 }
 
 // MARK: Output
 
+///   - triangleSideA: side length of one side of the triangle base
+///   - triangleSideB: side length of another side of the triangle base
+///   - triangleSideC: side length of yet another side of the triangle base
+///   - height: height of the prism
+///   - triangleLength: the length of a line running perpendicular to one of the sides of the triangle base to the opposite vertex of the triangle
