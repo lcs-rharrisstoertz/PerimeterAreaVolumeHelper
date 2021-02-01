@@ -67,6 +67,8 @@ func surfaceAreaOfTriangularPrism (triangleSideA: Double, triangleSideB: Double,
 
 // MARK: Input
 
+var shape = ""
+var surfaceArea = 0.0
 print("Surface Area Calculator")
 print("=======================")
 while true {
@@ -78,16 +80,32 @@ while true {
     print("5: Rectangular prism")
     print("6: Triangular Prism")
     print("Enter your choice (1/2/3/4/5/6): ", terminator: "")
-    var shape = readLine()!
-    if shape == 1 or shape == 2 or shape == 3 or shape == 4 or shape == 5 or shape == 6 {
+    shape = readLine()!
+    if shape == "1" || shape == "2" || shape == "3" || shape == "4" || shape == "5" || shape == "6" {
         break
     } else {
-        print("Oh no! It looks like")
+        print("Oh no! \(shape) isn't a valid option. Please choose a different option.")
     }
 }
 
 //MARK: Process
 
+switch shape {
+case "1":
+    print("Enter the radius of the cylinder: ", terminator: "")
+    var radius = Double(readLine()!)
+    print("Enter the height of the cylinder: ", terminator: "")
+    var height = Double(readLine()!)
+    surfaceArea = surfaceAreaOfCylinder(radius: radius!, height: height!)
+    print("The cylinder has a surface area of \(surfaceArea) units squared")
+case "2":
+    print("Enter the radius of the sphere: ", terminator: "")
+    var radius = Double(readLine()!)
+    surfaceArea = surfaceAreaOfSphere(radius: radius!)
+    print("The sphere has a surface area of \(surfaceArea) units squared")
+default:
+    break
+}
 
 // MARK: Output
 
