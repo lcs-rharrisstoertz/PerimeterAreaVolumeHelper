@@ -63,26 +63,17 @@ func surfaceAreaOfTriangularPrism (triangleSideA: Double, triangleSideB: Double,
 }
 // MARK: Input
 //setting up variables
-var shape = ""
 var surfaceArea = 0.0
 print("Surface Area Calculator")
 print("=======================")//adds title
-while true {//starts "infinite" loop
-    print("What shape do you want to calculate the surface area of?")//print menu of options
-    print("1: Cylinder")
-    print("2: Sphere")
-    print("3: Cone")
-    print("4: Square-based pyramid")
-    print("5: Rectangular prism")
-    print("6: Triangular Prism")
-    print("Enter your choice (1/2/3/4/5/6): ", terminator: "")
-    shape = readLine()!//get user choice
-    if shape == "1" || shape == "2" || shape == "3" || shape == "4" || shape == "5" || shape == "6" {//checks whether the user entered a valid choice
-        break//if the user entered a valid choice, we break out of the infinite loop and move on
-    } else {
-        print("Oh no! \(shape) isn't a valid option. Please choose a different option.")
-    }//if the user didn't enter a valid choice, the infinite loop restarts. They are again shown the menu of options and asked to choose a valid choice. This will repeat indefinitely until they choose a valid shape.
-}
+print("What shape do you want to calculate the surface area of?")//print menu of options
+print("1: Cylinder")
+print("2: Sphere")
+print("3: Cone")
+print("4: Square-based pyramid")
+print("5: Rectangular prism")
+print("6: Triangular Prism")
+var shape = String.collectInput(withPrompt: "Enter your choice (1/2/3/4/5/6): ", acceptableValues: ["1", "2", "3", "4", "5", "6"])
 
 //MARK: Process and Output
 
